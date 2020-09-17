@@ -43,7 +43,6 @@ fruit={
 # print(len({1,2,3}))
 # print({1,2}.intersection({1,4}))
 # print({1,2} & ({1,4}))
-# print("-",*40)
 # print("-" * 40)
 # print({1,2}.difference({1,4}))
 # print({1,2} - {1,4})
