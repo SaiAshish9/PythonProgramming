@@ -1,3 +1,6 @@
+# object is the base class of all classes
+# in python
+
 class TagCloud:
     def __init__(self):
         self.tags={}
@@ -17,9 +20,18 @@ class TagCloud:
     def __len__(self):
         return list(self.tags.values())[0]
 
+    #
+    # @abstractmethod
+    # def read(self):
+    #     pass
+
+
 
 cloud=TagCloud()
 # cloud.add("python")
 [cloud.add("python") for x in range(3)]
 print(cloud.tags)
 print(len(cloud))
+
+print(isinstance(cloud,object))
+print(issubclass(TagCloud,object))
