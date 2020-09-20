@@ -1,7 +1,8 @@
 # object is the base class of all classes
 # in python
+from abc import ABC,abstractmethod
 
-class TagCloud:
+class TagCloud(ABC):
     def __init__(self):
         self.tags={}
 
@@ -21,9 +22,16 @@ class TagCloud:
         return list(self.tags.values())[0]
 
     #
-    # @abstractmethod
-    # def read(self):
-    #     pass
+#     @abstractmethod
+#     def read(self):
+#         pass
+#
+# class B(TagCloud):
+#     def read(self):
+#         return {}
+#
+# b=B()
+# print(b.__dict__)
 
 
 
