@@ -1,0 +1,34 @@
+# Subclassing object yields a new-style class.
+# Metaclasses (like class factories, but works
+# transparently)
+class A():
+    def __init__(self,name):
+        self.name=name
+        self._test=name
+
+    def print(self):
+        print(self.name)
+
+    def _get_test(self):
+        return self._test
+    c=property(_get_test)
+    @property
+    def b(self):
+        return self._test
+a=A("hi")
+# print(a.b)
+# print(a.c)
+class B(A):
+   def __init__(self,*args):
+       # A.__init__(self,name=name)
+       super().__init__(name=args[0])
+       self.test=args[1]
+
+   # method overriding
+   def print(self):
+       print("123")
+
+b=B("hi","123")
+# print(b.b)
+print(b.__dict__)
+b.print()
