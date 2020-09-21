@@ -1,0 +1,3 @@
+from sales import *
+
+calc()
